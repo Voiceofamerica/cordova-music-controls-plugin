@@ -1,4 +1,4 @@
-package com.homerours.musiccontrols;
+package com.voa.musiccontrols;
 
 import android.app.Service;
 import android.os.IBinder;
