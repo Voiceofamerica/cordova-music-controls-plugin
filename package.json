@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/homerours/cordova-music-controls-plugin.git"
+    "url": "git+https://github.com/Voiceofamerica/cordova-music-controls-plugin.git"
   },
   "keywords": [
     "cordova",
@@ -34,10 +34,13 @@
   ],
   "main": "index.js",
   "typings": "index.d.ts",
-  "author": "homerours",
+  "authors": [
+    "homerours",
+    "kgroat"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/homerours/cordova-music-controls-plugin/issues"
+    "url": "https://github.com/Voiceofamerica/cordova-music-controls-plugin/issues"
   },
-  "homepage": "https://github.com/homerours/cordova-music-controls-plugin#readme"
+  "homepage": "https://github.com/Voiceofamerica/cordova-music-controls-plugin#readme"
 }
