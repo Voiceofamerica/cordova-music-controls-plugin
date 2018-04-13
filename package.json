@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-music-controls",
+  "name": "@voiceofamerica/cordova-plugin-music-controls",
   "version": "2.1.4",
   "description": "Music controls for Cordova apps",
   "cordova": {
@@ -28,6 +28,8 @@
       "version": ">=3.4.0"
     }
   ],
+  "main": "index.js",
+  "typings": "index.d.ts",
   "author": "homerours",
   "license": "MIT",
   "bugs": {

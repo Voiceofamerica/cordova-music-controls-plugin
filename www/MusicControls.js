@@ -89,7 +89,8 @@ var musicControls = {
     );
   },
   receiveCallbackFromNative: function(messageFromNative) {
-    musicControls.updateCallback(messageFromNative);
+    var parsedMessage = JSON.parse(messageFromNative);
+    musicControls.updateCallback(parsedMessage);
     cordova.exec(
       musicControls.receiveCallbackFromNative,
       function(res) {},

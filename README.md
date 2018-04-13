@@ -16,9 +16,9 @@ Music controls for Cordova applications. Display a 'media' notification with pla
 - Create the media controls:
 ```javascript
 MusicControls.create({
-    track       : 'Time is Running Out',		// optional, default : ''
+	track       : 'Time is Running Out',		// optional, default : ''
 	artist      : 'Muse',						// optional, default : ''
-    cover       : 'albums/absolution.jpg',		// optional, default : nothing
+	cover       : 'albums/absolution.jpg',		// optional, default : nothing
 	// cover can be a local path (use fullpath 'file:///storage/emulated/...', or only 'my_image.jpg' if my_image.jpg is in the www folder of your app)
 	//			 or a remote url ('http://...', 'https://...', 'ftp://...')
 	isPlaying   : true,							// optional, default : true
@@ -33,11 +33,11 @@ MusicControls.create({
 	album       : 'Absolution',     // optional, default: ''
 	duration : 60, // optional, default: 0
 	elapsed : 10, // optional, default: 0
-  	hasSkipForward : true, //optional, default: false. true value overrides hasNext.
-  	hasSkipBackward : true, //optional, default: false. true value overrides hasPrev.
-  	skipForwardInterval : 15, //optional. default: 0.
+	hasSkipForward : true, //optional, default: false. true value overrides hasNext.
+	hasSkipBackward : true, //optional, default: false. true value overrides hasPrev.
+	skipForwardInterval : 15, //optional. default: 0.
 	skipBackwardInterval : 15, //optional. default: 0.
-	hasScrubbing : false, //optional. default to false. Enable scrubbing from control center progress bar 
+	hasScrubbing : false, //optional. default to false. Enable scrubbing from control center progress bar
 
 	// Android only, optional
 	// text displayed in the status bar when the notification (and the ticker) are updated
@@ -61,9 +61,7 @@ MusicControls.destroy(onSuccess, onError);
 - Subscribe events to the media controller:
 ```javascript
 function events(action) {
-
-  const message = JSON.parse(action).message;
-	switch(message) {
+	switch(action.message) {
 		case 'music-controls-next':
 			// Do something
 			break;
@@ -85,7 +83,7 @@ function events(action) {
 			// Do something
 			break;
     	case 'music-controls-seek-to':
-			const seekToInSeconds = JSON.parse(action).position;
+			const seekToInSeconds = action.position;
 			MusicControls.updateElapsed({
 				elapsed: seekToInSeconds,
 				isPlaying: true
@@ -132,7 +130,7 @@ MusicControls.updateElapsed({
 });
 ```
 
-## List of media button events 
+## List of media button events
 - Default:
 ```javascript
 'music-controls-media-button'
