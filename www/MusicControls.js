@@ -110,7 +110,7 @@
   if (typeof module !== 'undefined' && module && module.exports && exports) {
 
     // CommonJS
-    exports.MusicControls = musicControls;
+    exports.MusicControls = MusicControls;
   } else if (typeof define === 'function') {
 
     // AMD
