@@ -78,12 +78,12 @@
 
     // Register callback
     subscribe: function(onUpdate) {
-      musicControls.updateCallback = onUpdate;
+      MusicControls.updateCallback = onUpdate;
     },
     // Start listening for events
     listen: function() {
       cordova.exec(
-        musicControls.receiveCallbackFromNative,
+        MusicControls.receiveCallbackFromNative,
         function(res) {},
         "MusicControls",
         "watch",
@@ -92,9 +92,9 @@
     },
     receiveCallbackFromNative: function(messageFromNative) {
       var parsedMessage = JSON.parse(messageFromNative);
-      musicControls.updateCallback(parsedMessage);
+      MusicControls.updateCallback(parsedMessage);
       cordova.exec(
-        musicControls.receiveCallbackFromNative,
+        MusicControls.receiveCallbackFromNative,
         function(res) {},
         "MusicControls",
         "watch",
